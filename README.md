@@ -21,4 +21,12 @@ This is a playground for Scala
 - Nothing is a subtype of all types, also called the bottom type. There is no value that has type Nothing. 
 - Null is a subtype of all reference types (i.e. any subtype of AnyRef). It has a single value identified by the keyword literal null.
 
-# 
+# Classes, tuples and traits
+- Traits == Java interface
+- Function can return tuple. Tuple type is `TupleN` (N can be 1-22)
+- You can compose a class use `class D extends B with C`, where B is concrete class, and C is a trait. In this case, C is usually an optional trait you can plugin.
+
+# Function and methods
+- Function & method can both be directly passed into another function as lambda. Just like go.
+- Function can also be return type as lambda
+- You can define private helper function inside a function  
