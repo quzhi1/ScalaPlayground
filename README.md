@@ -25,8 +25,16 @@ This is a playground for Scala
 - Traits == Java interface
 - Function can return tuple. Tuple type is `TupleN` (N can be 1-22)
 - You can compose a class use `class D extends B with C`, where B is concrete class, and C is a trait. In this case, C is usually an optional trait you can plugin.
+- Case class is a very good way to do immutable class
+- Traits and classes can be marked sealed which means all subtypes must be declared in the same file.
+- An object with the same name as a class is called a companion object. Conversely, the class is the object’s companion class.
 
 # Function and methods
 - Function & method can both be directly passed into another function as lambda. Just like go.
 - Function can also be return type as lambda
-- You can define private helper function inside a function  
+- You can define private helper function inside a function
+
+# Object
+- Can do singleton class
+- Can do static class method
+- Can do factory method
