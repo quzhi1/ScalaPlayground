@@ -19,7 +19,8 @@ This is a playground for Scala
 
 ![](https://docs.scala-lang.org/resources/images/tour/type-casting-diagram.svg)
 - Nothing is a subtype of all types, also called the bottom type. There is no value that has type Nothing. 
-- Null is a subtype of all reference types (i.e. any subtype of AnyRef). It has a single value identified by the keyword literal null.
+- Null is a subtype of all reference types (i.e. any subtype of AnyRef). It has a single value identified by the keyword literal `null`.
+- Nil is empty collection. So `Nil != null`
 
 # Classes, tuples and traits
 - Traits == Java interface
@@ -38,3 +39,13 @@ This is a playground for Scala
 - Can do singleton class
 - Can do static class method
 - Can do factory method
+- `.apply` construct an object; `.unapply` extract an object
+- The return type of an `unapply` should be chosen as follows:
+    - If it is just a test, return a `Boolean`. For instance `case even()`.
+    - If it returns a single sub-value of type T, return an `Option[T]`.
+    - If you want to return several sub-values T1,...,Tn, group them in an optional tuple `Option[(T1,...,Tn)]`.
+
+# Variances
+- This article explains how scala can delete variance fault in compile time: [Scala与Java之间的型变对比 - 映柳枫鹏的文章 - 知乎](https://zhuanlan.zhihu.com/p/96822693) and [scala 逆变有什么用? - 夏梓耀的回答 - 知乎](https://www.zhihu.com/question/35339328/answer/62632559)
+
+ 
