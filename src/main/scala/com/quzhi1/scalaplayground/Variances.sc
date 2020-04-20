@@ -61,6 +61,7 @@ class Container[A](value: A) {
 }
 
 val catContainer: Container[Cat] = new Container(Cat("Felix"))
-val animalContainer: Container[Animal] = catContainer // Doesn't compile
-animalContainer.setValue(Dog("Spot"))
-val cat: Cat = catContainer.getValue // Oops, we'd end up with a Dog assigned to a Cat
+// Following won't compile
+//val animalContainer: Container[Animal] = catContainer // Doesn't compile
+//animalContainer.setValue(Dog("Spot"))
+//val cat: Cat = catContainer.getValue // Oops, we'd end up with a Dog assigned to a Cat
