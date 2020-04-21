@@ -21,6 +21,7 @@ This is a playground for Scala
 - Nothing is a subtype of all types, also called the bottom type. There is no value that has type Nothing. 
 - Null is a subtype of all reference types (i.e. any subtype of AnyRef). It has a single value identified by the keyword literal `null`.
 - Nil is empty collection. So `Nil != null`
+- Implicit conversion is very useful for Java <-> Scala type conversion
 
 # Classes, tuples and traits
 - Traits == Java interface
@@ -34,6 +35,9 @@ This is a playground for Scala
 - Function & method can both be directly passed into another function as lambda. Just like go.
 - Function can also be return type as lambda
 - You can define private helper function inside a function
+- There can be implicit parameters. If you don't give it,
+    - Scala will first look for implicit definitions and implicit parameters that can be accessed directly (without a prefix) at the point the method with the implicit parameter block is called.
+    - Then it looks for members marked implicit in all the companion objects associated with the implicit candidate type.
 
 # Object
 - Can do singleton class
@@ -53,5 +57,4 @@ This is a playground for Scala
 - Suppose class B has an inner class A, class C also has an inner class A. In Java, `B.A == C.A`. In scala, `B.A == C.A`.
 - `trait` and `abstract class` can have generic too.
 - In Java, `A implements B, C`. In scala, `A with B with C` (Since you can't do `A extends B, C`).
-
- 
+- Trait can access other trait's member using self type 
