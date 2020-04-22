@@ -22,6 +22,7 @@ This is a playground for Scala
 - Null is a subtype of all reference types (i.e. any subtype of AnyRef). It has a single value identified by the keyword literal `null`.
 - Nil is empty collection. So `Nil != null`
 - Implicit conversion is very useful for Java <-> Scala type conversion
+- Generic method and generic class can infer type from value 
 
 # Classes, tuples and traits
 - Traits == Java interface
@@ -38,6 +39,9 @@ This is a playground for Scala
 - There can be implicit parameters. If you don't give it,
     - Scala will first look for implicit definitions and implicit parameters that can be accessed directly (without a prefix) at the point the method with the implicit parameter block is called.
     - Then it looks for members marked implicit in all the companion objects associated with the implicit candidate type.
+- Method can have generics too.
+- Just like Ruby, operators (like + - * /) are also methods. So you can define them for your type.
+- Use by-name-parameters to force re-evaluate method parameter
 
 # Object
 - Can do singleton class
