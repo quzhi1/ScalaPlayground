@@ -52,6 +52,7 @@ This is a playground for Scala
     - If it is just a test, return a `Boolean`. For instance `case even()`.
     - If it returns a single sub-value of type T, return an `Option[T]`.
     - If you want to return several sub-values T1,...,Tn, group them in an optional tuple `Option[(T1,...,Tn)]`.
+- If you want to share an object across package, use `package object`
 
 # Classes relationship
 - This article explains how scala can delete variance fault in compile time: [Scala与Java之间的型变对比 - 映柳枫鹏的文章 - 知乎](https://zhuanlan.zhihu.com/p/96822693) and [scala 逆变有什么用? - 夏梓耀的回答 - 知乎](https://www.zhihu.com/question/35339328/answer/62632559).
@@ -62,3 +63,9 @@ This is a playground for Scala
 - `trait` and `abstract class` can have generic too.
 - In Java, `A implements B, C`. In scala, `A with B with C` (Since you can't do `A extends B, C`).
 - Trait can access other trait's member using self type 
+
+# Annotation
+- Like Java, scala accept annotation
+- Scala can optimize for tail-recursion. Just add `@tailrec`. (About tail recursion, see [什么是尾递归？ - 知乎](https://www.zhihu.com/question/20761771/answer/19996299))
+- Just like C++, you can make method inline. Just add `@inline`
+- All Java annotations can be used in Scala
